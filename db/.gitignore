@@ -1,0 +1,17 @@
+# ========================================
+# Ignore everything in db by default
+# ========================================
+*
+
+# ========================================
+# Whitelist important files
+# ========================================
+!.gitignore        # track this gitignore file itself
+!init.sql          # database bootstrap script
+!README.md         # optional documentation
+!README.txt        # optional documentation
+
+# ========================================
+# NOTE:
+# init.sql is essential for enabling pgvector on database startup.
+# All other files (dumps, temp SQL files) will be ignored automatically.

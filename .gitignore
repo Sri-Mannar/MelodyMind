@@ -1,29 +1,49 @@
+# ========================================
 # OS-specific files
+# ========================================
 .DS_Store
 Thumbs.db
 
+# ========================================
 # Logs at root level
+# ========================================
 *.log
 
-# Environment files at root
+# ========================================
+# Environment files
+# ========================================
 .env
 !.env.example
 
+# ========================================
 # Python virtual environments at root
+# ========================================
 .venv/
 venv/
 env/
 ENV/
 
+# ========================================
 # Editor / IDE settings
+# ========================================
 .vscode/
 .idea/
 
+# ========================================
 # Backup / temporary files
+# ========================================
 *.swp
 *.swo
 *.bak
 *.tmp
 
+# ========================================
 # Docker
-# (Keep docker-compose.yml tracked — do NOT ignore it)
+# ========================================
+# Keep docker-compose.yml tracked — do NOT ignore it
+
+# ========================================
+# Subfolders
+# ========================================
+# Do NOT ignore db folder, frontend, backend, ml-service
+# Each of these has its own .gitignore for folder-specific rules
