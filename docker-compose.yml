@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    environment:
+      POSTGRES_USER: melody
+      POSTGRES_PASSWORD: melodypass
+      POSTGRES_DB: melodymind
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  ml-service:
+    build: ./ml-service
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - ml-service
+
+volumes:
+  db_data:

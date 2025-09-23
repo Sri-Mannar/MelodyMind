@@ -1,0 +1,35 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.conda/
+.venv*/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook checkpoints (if you ever add notebooks)
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+!.env.example
+
+# OS / Editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Docker
+# (Keep Dockerfile tracked — do NOT ignore it)
